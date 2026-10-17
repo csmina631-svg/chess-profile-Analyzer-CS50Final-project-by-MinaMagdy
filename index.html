@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chess Profile Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Chess Profile Analyzer</h1>
+        <p>CS50 Final Project - Mina Magdy</p>
+
+        <div class="info-box">
+            <p><strong>Understanding the Chess ELO System:</strong></p>
+            <img src="تعريف نظام  ال elo.jpg" alt="ELO Infographic">
+        </div>
+
+        <form id="chess-form">
+            
+            <h3>1. Basic Information</h3>
+
+            <div class="form-group">
+                <label>Player Name:</label>
+                <input type="text" id="player-name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Estimated ELO Rating:</label>
+                <input type="number" id="elo" required>
+            </div>
+
+            <div class="form-group">
+                <label>Favorite White Opening:</label>
+                <input type="text" id="white-opening" required>
+            </div>
+
+            <div class="form-group">
+                <label>Favorite Black Opening:</label>
+                <input type="text" id="black-opening" required>
+            </div>
+
+            <h3>2. Strategic & Experience Questions</h3>
+
+            <div class="form-group">
+                <label class="q-color-1">1. How long have you been playing chess actively?</label>
+                <label class="radio-label"><input type="radio" name="q1" value="low" required> A few months to a year, mostly picking up rules and basic patterns.</label>
+                <label class="radio-label"><input type="radio" name="q1" value="medium"> 1 to 3 years, mostly playing casual online matches without deep study.</label>
+                <label class="radio-label"><input type="radio" name="q1" value="correct"> 3 to 7+ years of consistent play, studying theory, and analyzing games.</label>
+                <label class="radio-label"><input type="radio" name="q1" value="low"> I learned as a kid, but only started playing seriously and regularly recently.</label>
+            </div>
+
+            <div class="form-group">
+                <label class="q-color-2">2. What is the highest-rated player you have ever beaten?</label>
+                <label class="radio-label"><input type="radio" name="q2" value="low" required> Under 1000, mostly beating beginners or casual friends.</label>
+                <label class="radio-label"><input type="radio" name="q2" value="medium"> 1000 to 1400, occasional wins against intermediate online players.</label>
+                <label class="radio-label"><input type="radio" name="q2" value="medium"> 1500 to 1900, beating strong club players or advanced tournament regulars.</label>
+                <label class="radio-label"><input type="radio" name="q2" value="correct"> 2000+ or a FIDE Titled player (CM, FM, IM, GM).</label>
+            </div>
+
+            <div class="form-group">
+                <label class="q-color-3">3. How do you handle unusual or weird moves on move 2 or 3 in the opening?</label>
+                <label class="radio-label"><input type="radio" name="q3" value="low" required> I get annoyed and completely lost because it’s not the theory I memorized.</label>
+                <label class="radio-label"><input type="radio" name="q3" value="medium"> I immediately try to punish it with a reckless attack, often overextending.</label>
+                <label class="radio-label"><input type="radio" name="q3" value="correct"> I rely on fundamental principles—controlling the center, developing pieces, and punishing structural weaknesses.</label>
+                <label class="radio-label"><input type="radio" name="q3" value="low"> I just copy their setup or play passively until the middlegame.</label>
+            </div>
+
+            <div class="form-group">
+                <label class="q-color-4">4. How many full moves ahead can you accurately calculate in a sharp position?</label>
+                <label class="radio-label"><input type="radio" name="q4" value="low" required> 1 to 2 moves (I mostly look at my immediate threat and my opponent's direct response).</label>
+                <label class="radio-label"><input type="radio" name="q4" value="correct"> 3 to 5+ moves (Visualizing forcing candidate moves, opponent replies, and intermediate checks).</label>
+                <label class="radio-label"><input type="radio" name="q4" value="medium"> Only when the position is completely forced with checks and captures.</label>
+                <label class="radio-label"><input type="radio" name="q4" value="low"> I rely mostly on intuition and vibes rather than deep calculation.</label>
+            </div>
+
+            <div class="form-group">
+                <label class="q-color-5">5. What is the main reason you usually lose your games?</label>
+                <label class="radio-label"><input type="radio" name="q5" value="low" required> Getting completely out-theorized and crushed in the first 10 moves.</label>
+                <label class="radio-label"><input type="radio" name="q5" value="correct"> Subtle positional concessions that compound, or tactical oversights in complex time trouble.</label>
+                <label class="radio-label"><input type="radio" name="q5" value="medium"> Having no idea how to win or draw standard endgames.</label>
+                <label class="radio-label"><input type="radio" name="q5" value="low"> Dropping clean pieces due to basic one-move blindness.</label>
+            </div>
+
+            <div class="form-group">
+                <label class="q-color-6">6. What happens when your clock drops under 30 seconds in a blitz game?</label>
+                <label class="radio-label"><input type="radio" name="q6" value="low" required> Absolute panic—I start dropping pieces and blundering my entire position.</label>
+                <label class="radio-label"><input type="radio" name="q6" value="medium"> I spam random pre-moves and hope for the best.</label>
+                <label class="radio-label"><input type="radio" name="q6" value="correct"> I switch to pure tactile pattern recognition, relying on intuitive checks, captures, and practical flagging tricks.</label>
+                <label class="radio-label"><input type="radio" name="q6" value="low"> I usually just resign to save time.</label>
+            </div>
+
+            <div class="form-group">
+                <label class="q-color-7">7. Can you easily execute basic endgames (like Rook & King or Bishop & Knight checkmate)?</label>
+                <label class="radio-label"><input type="radio" name="q7" value="low" required> No, I often accidentally stalemate the opponent or run out of time.</label>
+                <label class="radio-label"><input type="radio" name="q7" value="medium"> I know Rook & King with the box method, but Bishop & Knight is a mystery.</label>
+                <label class="radio-label"><input type="radio" name="q7" value="correct"> Yes, I can execute all standard theoretical checkmates effortlessly without second-guessing.</label>
+                <label class="radio-label"><input type="radio" name="q7" value="low"> I don't study endgames; I try to win or lose in the middlegame.</label>
+            </div>
+
+            <div class="form-group">
+                <label class="q-color-8">8. What is your primary style of winning games?</label>
+                <label class="radio-label"><input type="radio" name="q8" value="medium" required> Launching wild, unsound king-side attacks and hoping they crack under pressure.</label>
+                <label class="radio-label"><input type="radio" name="q8" value="correct"> Creating long-term positional imbalances, exploiting weak squares, and grinding a technical advantage.</label>
+                <label class="radio-label"><input type="radio" name="q8" value="low"> Waiting for the opponent to hang a piece in a quiet position.</label>
+                <label class="radio-label"><input type="radio" name="q8" value="low"> Swindling drawn or losing positions when time gets low.</label>
+            </div>
+
+            <div class="form-group">
+                <label class="q-color-9">9. Why did your rating go up recently (if it did)?</label>
+                <label class="radio-label"><input type="radio" name="q9" value="medium" required> I memorized 15 moves deep into a trendy opening repertoire.</label>
+                <label class="radio-label"><input type="radio" name="q9" value="correct"> I cleaned up my blunder habits, improved my calculation discipline, and learned basic positional pawn structures.</label>
+                <label class="radio-label"><input type="radio" name="q9" value="low"> I just spammed more games until matchmaking favored me.</label>
+                <label class="radio-label"><input type="radio" name="q9" value="low"> I started using opening traps that beginners always fall for.</label>
+            </div>
+
+            <div class="form-group">
+                <label class="q-color-10">10. Do you review and analyze your completed games?</label>
+                <label class="radio-label"><input type="radio" name="q10" value="low" required> Never, I immediately queue up for the next match out of frustration or boredom.</label>
+                <label class="radio-label"><input type="radio" name="q10" value="medium"> Only when I win a brilliant tactical game to look at the engine graph.</label>
+                <label class="radio-label"><input type="radio" name="q10" value="correct"> Always—I check without the engine first to find my blind spots, then use it to catch missed tactical motifs.</label>
+                <label class="radio-label"><input type="radio" name="q10" value="low"> Sometimes, but I only look at where I lost my queen.</label>
+            </div>
+
+            <h3>3. Tactical Puzzles (White to Move)</h3>
+
+            <div class="puzzle-alert">
+                ⚠️ Notice: You must write the first letter of the piece in CAPITAL (e.g., R, Q, K, N, B) followed by lowercase square coordinates (e.g., Re8).
+            </div>
+
+            <div class="puzzle-box">
+                <p><strong>Puzzle 1: White to Move</strong></p>
+                <img src="اللغز الاول.png" alt="Puzzle 1">
+                <input type="text" id="p1" placeholder="Move" required>
+            </div>
+
+            <div class="puzzle-box">
+                <p><strong>Puzzle 2: White to Move</strong></p>
+                <img src="اللغز التاني.png" alt="Puzzle 2">
+                <input type="text" id="p2" placeholder="Move" required>
+            </div>
+
+            <div class="puzzle-box">
+                <p><strong>Puzzle 3: White to Move</strong></p>
+                <img src="اللغز التالت.png" alt="Puzzle 3">
+                <input type="text" id="p3" placeholder="Move" required>
+            </div>
+
+            <div class="puzzle-box">
+                <p><strong>Puzzle 4: White to Move</strong></p>
+                <img src="الرابع.png" alt="Puzzle 4">
+                <input type="text" id="p4" placeholder="Move" required>
+            </div>
+
+            <div class="puzzle-box">
+                <p><strong>Puzzle 5: White to Move</strong></p>
+                <img src="الخامس.jpg" alt="Puzzle 5">
+                <input type="text" id="p5" placeholder="Move" required>
+            </div>
+
+            <button type="submit">Show Results</button>
+        </form>
+
+        <div id="result-box" style="display: none;">
+            <h2>Your Diagnostic Report</h2>
+            <p>Name: <span id="res-name"></span></p>
+            <p>Estimated ELO: <span id="res-elo"></span></p>
+            <p>White Opening: <span id="res-white"></span></p>
+            <p>Black Opening: <span id="res-black"></span></p>
+            <p>Strategic Score: <span id="res-strat-score"></span> / 10</p>
+            <p>Tactics Score: <span id="res-score"></span> / 5</p>
+            <p>Recommendation: <span id="res-advice"></span></p>
+            <button id="reset-btn">Reset Quiz</button>
+        </div>
+
+        <footer>
+            <p>CS50 Final Project - Mina Magdy</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

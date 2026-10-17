@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2f3640;
+    color: #f5f6fa;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #353b48;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    color: #fbc531;
+}
+
+.container > p {
+    text-align: center;
+    color: #00a8ff;
+    font-size: 14px;
+}
+
+.info-box {
+    background: #2f3640;
+    padding: 10px;
+    border: 1px solid #485460;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.info-box img {
+    max-width: 250px;
+    height: auto;
+}
+
+h3 {
+    color: #4cd137;
+    border-bottom: 1px solid #485460;
+    padding-bottom: 5px;
+}
+
+.form-group, .puzzle-box {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.q-color-1 { color: #00d2d3; }
+.q-color-2 { color: #ff9f43; }
+.q-color-3 { color: #ff6b6b; }
+.q-color-4 { color: #1dd1a1; }
+.q-color-5 { color: #fabca1; }
+.q-color-6 { color: #54a0ff; }
+.q-color-7 { color: #c8d6e5; }
+.q-color-8 { color: #ff9ff3; }
+.q-color-9 { color: #00d2d3; }
+.q-color-10 { color: #fbc531; }
+
+.radio-label {
+    font-weight: normal;
+    margin-bottom: 5px;
+    background: #2f3640;
+    padding: 8px;
+    border: 1px solid #485460;
+    display: block;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    background: #2f3640;
+    border: 1px solid #485460;
+    color: #f5f6fa;
+}
+
+.puzzle-box {
+    background: #2f3640;
+    padding: 10px;
+    border: 1px solid #485460;
+    text-align: center;
+}
+
+.puzzle-box img {
+    max-width: 200px;
+    height: auto;
+    margin: 5px 0;
+}
+
+.puzzle-box input[type="text"] {
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00a8ff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0097e6;
+}
+
+#result-box {
+    background: #2f3640;
+    padding: 15px;
+    border: 1px solid #485460;
+}
+
+.puzzle-alert {
+    background: #1e272e;
+    border: 2px solid #e84118;
+    color: #e84118;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #718093;
+}
